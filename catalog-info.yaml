@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: go-azure-cluster-2lq2f10-gitops
+  description: This is GitOps manifest for go-azure-cluster-2lq2f10   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=go-azure-cluster-2lq2f10
+    backstage.io/kubernetes-id: go-azure-cluster-2lq2f10 
+    backstage.io/techdocs-ref: dir:.
+    dev.azure.com/project-repo: rhopp-rhtap-testing/go-azure-cluster-2lq2f10-gitops
+    dev.azure.com/project: shared-public
+    dev.azure.com/build-definition: rhopp-rhtap-testing.go-azure-cluster-2lq2f10-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:go-azure-cluster-2lq2f10

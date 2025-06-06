@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: go-azure-cluster-2lq2f10
+  janus-idp.io/tekton: go-azure-cluster-2lq2f10
+  backstage.io/kubernetes-id: go-azure-cluster-2lq2f10
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-azure-cluster-2lq2f10
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
